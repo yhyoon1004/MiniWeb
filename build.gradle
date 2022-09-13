@@ -19,11 +19,15 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'org.mariadb.jdbc:mariadb-java-client'//mariaDB연동 디펜던시 추가
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'//db에 붙을 때 클라이언트 프로그램 추가
 }
 
 tasks.named('test') {
